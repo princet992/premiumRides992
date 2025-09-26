@@ -11,7 +11,7 @@ import type {
 // Create the user API
 export const userApi = createApi({
   reducerPath: "userApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }),
+  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_URL }),
   tagTypes: ["user"],
   endpoints: (builder) => ({
     // registering a user

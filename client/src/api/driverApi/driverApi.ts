@@ -3,7 +3,7 @@ import type { GetRideResponse, RegiseterRideResponse, RegisterRideRequest } from
 
 export const driverApi = createApi({
   reducerPath: "rideDetails",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }),
+  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_URL }),
   tagTypes: ["Ride"],
   endpoints: (builder) => ({
     //createRide
